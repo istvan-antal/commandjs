@@ -13,7 +13,7 @@ module.exports = function (grunt) {
         },
         jscs: {
             src: srcFiles,
-            options: pkg.jscsConfig
+            options: grunt.file.readJSON('.jscs.json'),
         },
         clean: {
             coverage: {
@@ -79,7 +79,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-istanbul-coverage');
 
     grunt.registerTask('check', [
-        'jshint', 'jscs', 'unitTest'
+        'jshint', 'jscs'
     ]);
 
     grunt.registerTask('unitTest',

@@ -1,6 +1,6 @@
 {
     "name": "commandjs",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "main": "lib/command.js",
     "dependencies": {
         "promise": "^5.0.0"
